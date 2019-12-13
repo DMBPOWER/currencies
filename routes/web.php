@@ -15,7 +15,7 @@
 //    return view('welcome');
 //});
 
-Route::match(['get', 'post'], '/', 'CurrenciesController@show');
+Route::get('/', 'CurrenciesController@show');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

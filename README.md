@@ -6,5 +6,3 @@
 4. Migrate by using ``php artisan migrate``;
 5. Seed data by using ``php artisan db:seed``;
 6. ``php artisan currencies:parse``;
-
-###The project have a few bugs which will be fixed soon.

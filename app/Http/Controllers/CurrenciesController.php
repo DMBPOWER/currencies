@@ -20,7 +20,7 @@ class CurrenciesController extends Controller
         }
 
         if (empty($request["history"])) {
-            $request["history"] = 3;
+            $request["history"] = 2;
         }
 
         if (empty($request["currency"])) {
