@@ -1,9 +1,10 @@
 ## To start the project you need:
 
-1. Create .env file;
-2. Fill .env by your data;
-3. Migrate by using ``php artisan migrate``;
-4. Seed data by using ``php artisan db:seed``;
-5. ``php artisan currencies:parse``;
+1. ``composer update``;
+2. Create .env file;
+3. Fill .env by your data and generate artisan key by ``php artisan key:generate``;
+4. Migrate by using ``php artisan migrate``;
+5. Seed data by using ``php artisan db:seed``;
+6. ``php artisan currencies:parse``;
 
 ###The project have a few bugs which will be fixed soon.
