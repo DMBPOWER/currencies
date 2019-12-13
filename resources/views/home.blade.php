@@ -23,9 +23,9 @@
                 <div class="currency-form">
                     <div class="btn-group">
                         <select name="history" id="" class="form-control" style="margin: 20px 0;">
-                            <option class="dropdown-item" value="3">Choose history</option>
-                            <option class="dropdown-item" value="5">5 days</option>
-                            <option class="dropdown-item" value="7">7 days</option>
+                            <option class="dropdown-item" value="2">Choose history</option>
+                            <option class="dropdown-item" value="4">5 days</option>
+                            <option class="dropdown-item" value="6">7 days</option>
                             <option class="dropdown-item" value="all">For the all time</option>
                         </select>
                     </div>
