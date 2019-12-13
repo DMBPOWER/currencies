@@ -58,7 +58,7 @@ class ParseCurrency extends Command
 
         $date = date('Ymd');
 
-        $url = 'https://old.bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=' . $currency . '&date=' . $date . '&json';
+        $url = 'https://old.bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode='.$currency.'&date='.$date.'&json';
 
         $apiResponse = $client->get($url);
         $response = json_decode($apiResponse->getBody());

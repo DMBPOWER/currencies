@@ -29,7 +29,7 @@ class CurrenciesController extends Controller
 
         $date = [
             'to'  => date('d.m.Y'),
-            'from'    => date('d.m.Y', strtotime("- " .$request["history"]. " day"))
+            'from'    => date('d.m.Y', strtotime("- ".$request["history"]." day"))
         ];
 
         if ($request["history"] == 'all') {
