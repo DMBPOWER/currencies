@@ -13,7 +13,7 @@ class CurrenciesController extends Controller
     {
         $currency = new Currency;
         $currencyInfo = new CurrencyInfo;
-        $todayDate = date('d.m.Y');
+        $todayDate = date('Y-m-d');
 
         if (!$currencyInfo->isTodayParsed()) {
             Artisan::call('currency:parse');
@@ -29,7 +29,7 @@ class CurrenciesController extends Controller
 
         $date = [
             'to'  => $todayDate,
-            'from'    => date('d.m.Y', strtotime("- ".$request["history"]." day"))
+            'from'    => date('Y-m-d', strtotime("- ".$request["history"]." day"))
         ];
 
         if ($request["history"] == 'all') {
