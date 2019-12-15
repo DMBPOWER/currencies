@@ -22,10 +22,10 @@ class CurrencyInfo extends Model
 
     public function isTodayParsed($date)
     {
-        if (empty(CurrencyInfo::where('exchange_date', $date)->get()->toArray())) {
-            return false;
+        if (CurrencyInfo::where('exchange_date', $date)->exists()) {
+            return true;
         }
 
-        return true;
+        return false;
     }
 }

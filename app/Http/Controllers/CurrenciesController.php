@@ -14,8 +14,9 @@ class CurrenciesController extends Controller
     {
         $currency = new Currency;
         $currencyInfo = new CurrencyInfo;
+        $todayDate = date('d.m.Y');
 
-        if (!$currencyInfo->isTodayParsed(date('d.m.Y'))) {
+        if (!$currencyInfo->isTodayParsed($todayDate)) {
             Artisan::call('currency:parse');
         }
 
@@ -28,7 +29,7 @@ class CurrenciesController extends Controller
         }
 
         $date = [
-            'to'  => date('d.m.Y'),
+            'to'  => $todayDate,
             'from'    => date('d.m.Y', strtotime("- ".$request["history"]." day"))
         ];
 
