@@ -15,14 +15,14 @@ class CurrencyInfo extends Model
         $currencyInfo->name = $data->cc;
         $currencyInfo->name_translation = $data->txt;
         $currencyInfo->rate = $data->rate;
-        $currencyInfo->exchange_date = $data->exchangedate;
+        $currencyInfo->exchange_date = date('Y-m-d', strtotime($data->exchangedate));
 
         $currencyInfo->save();
     }
 
-    public function isTodayParsed($date)
+    public function isTodayParsed()
     {
-        if (CurrencyInfo::where('exchange_date', $date)->exists()) {
+        if (CurrencyInfo::where('exchange_date', date('Y-m-d'))->exists()) {
             return true;
         }
 

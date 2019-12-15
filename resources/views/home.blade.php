@@ -63,7 +63,7 @@
         data: {
             labels: [
                 @foreach($data as $item)
-                "{{ $item['exchange_date'] }}"@if($item != end($data)), @endif
+                "{{ date('d.m.Y', strtotime($item['exchange_date'])) }}"@if($item != end($data)), @endif
                 @endforeach
             ],
             datasets: [{

@@ -6,7 +6,6 @@ use App\Currency;
 use App\CurrencyInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\DB;
 
 class CurrenciesController extends Controller
 {
@@ -16,7 +15,7 @@ class CurrenciesController extends Controller
         $currencyInfo = new CurrencyInfo;
         $todayDate = date('d.m.Y');
 
-        if (!$currencyInfo->isTodayParsed($todayDate)) {
+        if (!$currencyInfo->isTodayParsed()) {
             Artisan::call('currency:parse');
         }
 

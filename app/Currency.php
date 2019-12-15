@@ -27,7 +27,7 @@ class Currency extends Model
         return Currency::select("currencies.name", "currencies_info.rate", "currencies_info.exchange_date")
                 ->join('currencies_info', 'currencies_info.name', '=', 'currencies.name')
                 ->where('currencies_info.name', $currency)
-                ->orderBy('currencies_info.exchange_date')
+                ->orderBy('currencies_info.exchange_date', 'asc')
                 ->get();
     }
 
