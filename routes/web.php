@@ -11,10 +11,6 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::get('/', 'CurrenciesController@show');
 
 Route::group(['prefix' => 'admin'], function () {
